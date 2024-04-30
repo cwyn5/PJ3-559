@@ -1,16 +1,74 @@
 <html>
 <head>
 <title>CS559 Project 3</title>
+<link rel="stylesheet" href="index.css">
 </head>
 
 <body>
-    <div id="canvas"></div>
-    <div id="ui"><form  onsubmit="return false">
-        <label for="file-input">Upload your CSV:</label>
-        <input type="file" accept=".csv" id="file-input">
-        <input type="submit" id="fileupload">
-    </form></div>
-    <div id="div2"></div>
     <script src="./script/main.js" type="module"></script>
+    <div class="csvui" id="ui"><form  onsubmit="return false">
+        <label for="file-input">Change dataset:</label>
+        <input type="file" accept=".csv" id="file-input">
+        <input type="submit" id="fileupload" value="Upload CSV">
+    </form></div>
+    <div><div id="canvas"></div>
+    <div class="chartui" id="div2">
+        <select id="chart_1">
+            <option value=0>Area Chart</option>
+            <option value=1>Line Chart</option>
+            <option value=2>Scatterplot</option>
+            <option value="3">2D Density Chart</option>
+        </select> 
+        <label for="dataset1">File used: </label>
+        <select id="dataset1">
+            <option value=0>Upload your own CSV above!</option>
+        </select> <label for="color1">Color Scheme: </label><select id="color1">
+            <option value='red'>Red</option>
+            <option value='blue'>Blue</option>
+            <option value='white'>Dark Mode</option>
+        </select>
+        <label for="select_x1">X axis: </label>
+        <select label="X axis" id="select_x1"></select>
+        <label for="select_y1">Y axis: </label>
+        <select label="Y axis" id="select_y1"></select>
+        <label for="w1">Width (px): </label>
+        <input label="Width (px)" type="number" id="w1">
+        <label for="h1">Height (px): </label>
+        <input label="Height (px)" type="number" id="h1">
+        <label for="label1">Chart Title: </label>
+        <input label="Chart Title" type="text" id="label1">
+        <button id="save1">Save Chart 1 as PNG</button></div>
+</div>
+<div><div id="canvas2"></div>
+<div class="chartui"id="div3">
+    <select id="chart_2">
+        <option value=0>Area Chart</option>
+        <option value=1>Line Chart</option>
+        <option value=2>Scatterplot</option>
+        <option value="3">2D Density Chart</option>
+    </select>
+    <label for="dataset2">File used: </label>
+        <select id="dataset2">
+            <option value=0>Upload your own CSV above!</option>
+        </select>
+    <label for="color2">Color Scheme: </label><select label='Color Scheme' id="color2">
+<option value='red'>Red</option>
+<option value='blue'>Blue</option>
+<option value='white'>Dark Mode</option>
+</select>
+<label for="select_x2">X axis: </label>
+    <select label="X axis" id="select_x2"></select>
+<label for="select_y2">Y axis: </label>
+    <select label="Y axis" id="select_y2"></select>
+    <label for="w2">Width (px): </label>
+    <input label="Width (px)" type="number" id="w2">
+    <label for="h2">Height (px): </label>
+    <input  label="Height (px)" type="number" id="h2">
+    <label for="label2">Chart Title: </label>
+    <input label="Chart Title" type="text" id="label2">
+    <button id="save2">Save Chart 2 as PNG</button></div>
+</div>  
+<img id="img">
+<canvas id="download"></canvas>
 </body>
 </html>
