@@ -532,6 +532,7 @@ async function readCSV() {
     Papa.parse(file, {
         complete: function(results) {
           updateDatasetList(document.getElementById('dataset1'), value, results.meta['fields'], results.data);
+          updateDatasetList(document.getElementById('dataset2'), value, results.meta['fields'], results.data);
         },
         header: true
     }); 
