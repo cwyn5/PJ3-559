@@ -339,7 +339,7 @@ svg.append("g")
   updateGraph2(file_contents[set_dataset2.value]);
 };
 sel_y2.onchange = function(){
-  y1 = sel_y1.value;
+  y2 = sel_y2.value;
   //console.log(y1);
   updateGraph2(file_contents[set_dataset2.value]);
 };
