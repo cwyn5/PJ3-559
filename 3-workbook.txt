@@ -1,0 +1,14 @@
+Main deliverable:
+1.            (DONE) HTML webpage (hosted on GitHub pages, I’ll send the link once I spin it up) with two SVG elements. 
+2.            (DONE) Visitors can load a CSV to be used on the page (only available locally, not shared with host or other users)
+3.            (DONE) From the webpage, users can manipulate the SVG elements to create one of 3 simple chart types (using the D3 library) per element.
+4.            (DONE) Users can choose the color palette, X and Y axes, and labels per element via an HTML menu. 
+5.            (DONE) The SVG elements are updated immediately on user action. (uses onchange, so may need to click/press enter in text/number entry menus)
+6.            (DONE) Users can save their SVG creations as a png by pressing a button. (
+7.            (DONE) Users can resize the elements on the page. (pixel width and height options.)
+8.            (DONE, 2 initial charts) Webpage loads with an example CSV and a single simple chart.
+
+Advanced features:
+1.            Site visitors can add or remove SVG elements (minimum 1 element, max TBD.) Each SVG element has the same functionality. – not done.
+2.            (DONE) Users can upload multiple CSVs, and assign each CSV to one or more SVG elements.
+3.            (DONE) Adding more than 3 basic charts. (added a 4th less-basic one)
