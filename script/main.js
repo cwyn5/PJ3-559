@@ -436,7 +436,7 @@ var y = d3.scaleLinear()
 svg.append("g")
   .attr("stroke", line_color)
   .call(d3.axisLeft(y));
-    if (type1 == 3) { //density
+    if (type2 == 3) { //density
       var densityData = d3.contourDensity()
       .x(function(d) { return x(d[x2]); })   // x and y = column name in .csv input data
       .y(function(d) { return y(d[y2]); })
@@ -454,7 +454,7 @@ svg.append("g")
         .attr("stroke", color2)
         .attr("stroke-linejoin", "round")
     }
-    if (type1 == 2) { //scatterplot
+    if (type2 == 2) { //scatterplot
       svg.append('g')
       .selectAll("dot")
       .data(file_contents)
@@ -465,7 +465,7 @@ svg.append("g")
         .attr("r", 3)
         .style("fill", color2)
     }
-    if (type1 == 1) { //line chart
+    if (type2 == 1) { //line chart
       svg.append("path")
       .datum(file_contents)
       .attr("fill", "none")
@@ -476,7 +476,7 @@ svg.append("g")
         .y(function(d) { return y(d[y2]) })
         )
     }
-    if (type1 == 0) { //area chart
+    if (type2 == 0) { //area chart
       svg.append("path")
       .datum(file_contents)
       .attr("fill", color2)
